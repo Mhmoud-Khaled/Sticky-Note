@@ -1,0 +1,14 @@
+.body{
+  background-color: blueviolet;
+  min-height: calc(100vh - 95px);
+  font-family: 'Tajawal', sans-serif;
+  display: grid;
+  grid-template-columns: 15% 83%;
+  grid-template-rows: 100%;
+  gap: 19px;
+  background-image: url(../assets/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 50px;
+}

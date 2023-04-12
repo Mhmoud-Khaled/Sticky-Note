@@ -1,0 +1,248 @@
+.note-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.note-container .note-box{
+  text-align: center;
+  align-self: center;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0px 0px 7px 2px #8a4b4b;
+  border-radius: 10px;
+  background-color: rgb(255, 244, 227);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.note-container .note-box:hover{
+  opacity: 1;
+  transform: scale(1.01);
+}
+
+.note-container .note-box .text-title{
+  border-bottom: 2px solid #8a4b4b;
+  text-transform: capitalize;
+  height: 60px;
+  overflow: hidden;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  justify-self: center;
+  padding: 5px 2px;
+}
+
+.note-container .note-box .text{
+  position: relative;
+  /* display: inline-block; */
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 5.9em; /* (Number of lines you want visible) * (line-height) */
+  line-height: 1.2em;
+
+  /* text-align:justify */
+
+}
+
+.note-container .note-box .button{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.note-container .note-box .button button{
+  padding: 5px;
+  width: 40%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.note-container .note-box .button .Edit{
+  background-color: rgb(19, 150, 2);
+
+}
+.note-container .note-box .button .Edit:hover{
+  transform: scale(1.04);
+}
+
+.note-container .note-box .button .delete{
+  background-color: rgb(201, 70, 52);
+
+}
+.note-container .note-box .button .delete:hover{
+  transform: scale(1.04);
+}
+
+
+.btnAdd{
+  border: 2px solid rgb(217, 111, 250);
+  border-radius: 50%;
+  transition: 0.3s;
+  background-color: rgba(200, 29, 252, 0.397);
+}
+
+.btnAdd:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.btnAdd i{
+  color: white;
+  animation: revers 0.3s linear forwards ;
+
+}
+
+
+.btnAdd:hover i{
+  animation: rotate 0.3s linear forwards ;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes revers {
+  0%{
+    transform: rotate(360deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
+.add-note{
+  position: fixed;
+  top: 100px;
+  left: 25%;
+  /* transform: translatex(-50%); */
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 400px;
+  background-color: #f3970ce1;
+  padding: 20px;
+  border-radius: 10px;
+  /* visibility: hidden; */
+  transform-origin: center;
+  animation: deactive 0.4s linear  1  forwards;
+}
+
+@keyframes deactive {
+  0%{
+    transform: scale(1);
+
+  }
+  50%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(0);
+    visibility: none !important;
+    opacity: 0 !important;
+  }
+}
+
+
+
+.add-note form label{
+  font-size: 25px;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+
+.add-note form input{
+  width: 70%;
+  background:transparent;
+  border: transparent;
+  border-bottom: 2px solid #8a4b4b;
+}
+
+.add-note form input:focus{
+  outline: none;
+  font-size: 22px;
+}
+
+.add-note form textarea{
+  width: 100%;
+  height: 300px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background: #faf9bf;
+  border: 2px solid #8a4b4b;
+  opacity: 0.8;
+}
+
+.add-note .add{
+  margin-top: 10px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: rgb(196, 80, 250);
+  color: white;
+  font-weight: 600;
+  padding: 6px 0px;
+}
+.add-note .Edit{
+  margin-top: 10px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: rgb(19, 150, 2);
+  color: white;
+  font-weight: 600;
+  padding: 6px 0px;
+}
+.add-note .delete{
+  margin-top: 10px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: rgb(201, 70, 52);
+  color: white;
+  font-weight: 600;
+  padding: 6px 0px;
+}
+
+.add-note .add:hover{
+  transform: scale(1.02);
+  background-color: rgb(151, 24, 209);
+}
+
+.active{
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform-origin: center;
+  animation: hiden 0.4s linear  1  ;
+}
+
+@keyframes hiden {
+  0%{
+    transform: scale(0);
+
+  }
+  50%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+
+  }
+}
+

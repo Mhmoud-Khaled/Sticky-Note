@@ -1,0 +1,43 @@
+
+
+.azan{
+  padding: 10px;
+  border-left: 3px solid #8a4b4b;
+  margin-right: 15px;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.azan .day{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.azan .date{
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.azan .timer{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.azan .title h3{
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 1px solid #8a4b4b;
+  margin-bottom: 30px;
+}
+
+.azan .time h4{
+  padding: 5px 0px;
+  font-size: 22px;
+  align-self: flex-start;
+}

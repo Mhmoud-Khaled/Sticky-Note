@@ -1,0 +1,15 @@
+header{
+  text-align: center;
+  background-color: blanchedalmond;
+  padding: 15px;
+  box-shadow: 0px 1px 6px 2px #8a4b4b;
+  font-family: 'Delicious Handrawn', cursive;
+  font-size: x-large;
+  letter-spacing: 14px;
+  z-index: 12;
+  position: relative;
+}
+
+h1{
+  font-weight: bold;
+}

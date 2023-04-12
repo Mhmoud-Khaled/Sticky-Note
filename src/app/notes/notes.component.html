@@ -1,0 +1,27 @@
+<div class="note-container">
+  <div class="note-box" *ngFor="let item of data; let index = index" >
+    <div class="title">
+      <h2 class="text-title">{{item.title}}</h2>
+    </div>
+    <div class="text">
+      <p class="prag">{{item.text}}</p>
+    </div>
+    <div class="button">
+      <button class="Edit" (click)="edit(index+1)">تعديل</button>
+      <button class="delete" (click)="delete(index+1)">حذف</button>
+    </div>
+  </div>
+  <div class="btnAdd" >
+    <button type="button" class="btn" (click)="show()"><i class="fa-solid fa-plus"></i></button>
+  </div>
+  <div class="add-note">
+    <form action="#" [formGroup]="dataForm" >
+      <label for="txt-title" class="title-lable">العنوان: </label>
+      <input type="text" name="txt-title" id="txt-title" formControlName="title" value={{title}}>
+      <textarea name="prag" id="prag" placeholder="اكتب ملاحظاتك" formControlName="text" value={{text}}></textarea>
+    </form>
+    <button class="add" (click)="add()" *ngIf="addbtn">اضافة</button>
+    <button class="Edit" (click)="afterEdit()" *ngIf="editbtn">تعديل</button>
+  </div>
+</div>
+

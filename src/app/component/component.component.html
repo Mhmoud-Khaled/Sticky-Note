@@ -1,0 +1,16 @@
+
+<div class="azan">
+  <h3 class="day">{{dayName}}</h3>
+  <h3 class="date">{{year}} / {{month}} / {{day}}</h3>
+  <h3 class="timer">{{second}} : {{minut}} : {{hour}}</h3>
+  <div class="title">
+    <h3>مواقيت الصلاة</h3>
+  </div>
+  <div class="time">
+    <h4>الفجر  : {{timing?.Fajr| slice:0:6}}</h4>
+    <h4>الظهر  : {{timing?.Dhuhr| slice:0:6}}</h4>
+    <h4>العصر  : {{timing?.Asr| slice:0:6}}</h4>
+    <h4>المغرب : {{timing?.Maghrib| slice:0:6}}</h4>
+    <h4>العشاء : {{timing?.Isha| slice:0:6}}</h4>
+  </div>
+</div>
